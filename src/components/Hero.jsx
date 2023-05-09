@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useLayoutEffect } from 'react'
+import React, {useState, useLayoutEffect } from 'react'
 import bg from '../assets/removedbgimages/background.png'
 import fog1 from '../assets/removedbgimages/fog_1.png'
 import fog2 from '../assets/removedbgimages/fog_2.png'
@@ -19,16 +19,16 @@ import mountain9 from '../assets/removedbgimages/mountain_9.png'
 import mountain10 from '../assets/removedbgimages/mountain_10.png'
 import blackshadow from '../assets/removedbgimages/black_shadow.png'
 import sunrays from '../assets/removedbgimages/sun_rays.png'
-import logo from '../assets/removedbgimages/logo.png'
+
 import { AiOutlineSearch } from 'react-icons/ai'
 import { FaPaperPlane } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { gsap } from "gsap";
+
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 const [iconClass, setIconClass] = useState("");
-const [hiddenMenuStyle, setHiddenMenuStyle] = useState({});
+
 
     const parallax_el = document.querySelectorAll('.parallax');
     const parallaxbg_el = document.querySelectorAll('.parallaxbg');
@@ -82,10 +82,10 @@ const [hiddenMenuStyle, setHiddenMenuStyle] = useState({});
         <nav className='flex text-2xl w-screen h-full items-center justify-between p-11'>
             <FaPaperPlane color='black'/>
             <ul className='flex s:gap-11 m:gap-11 lg:gap-11 xl:gap-11 gap-3 items-center text-white-300 font-thin text-2xl font-[Poppins]'>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Sign Up</a></li>
-                <li className='flex items-center justify-center'><a href="#"><AiOutlineSearch /></a></li>
-                <li className='w-10 h-10 flex items-center justify-center bg-white rounded-full bg-opacity-50'><a href="#" onClick={handleMenuClick}><GiHamburgerMenu className={iconClass} /></a></li>
+                <li><button>Login</button></li>
+                <li><button>Sign Up</button></li>
+                <li className='flex items-center justify-center'><button><AiOutlineSearch /></button></li>
+                <li className='w-10 h-10 flex items-center justify-center bg-white rounded-full bg-opacity-50'><button onClick={handleMenuClick}><GiHamburgerMenu className={iconClass} /></button></li>
             </ul>
         </nav>
           <div
@@ -93,10 +93,10 @@ const [hiddenMenuStyle, setHiddenMenuStyle] = useState({});
               menuOpen ? "scale-y-100" : "scale-y-0"
             }`}
           >
-            <a href="https://github.com/madeinutrecht" target="_blank">
+            <a href="https://github.com/madeinutrecht" target="_blank" rel='noreferrer' >
               GitHub
             </a>
-            <a href="https://vadimboot.com" target="_blank">
+            <a href="https://vadimboot.com" target="_blank" rel='noreferrer'>
               Portfolio
             </a>
           </div>
